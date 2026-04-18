@@ -1,7 +1,8 @@
-import GroupPlaceholderPage from "../_placeholder/GroupPlaceholderPage";
+import CommunityPageLayout from "../../../components/CommunityPageLayout";
+import { communityPageBySlug } from "../../../data/communityPages";
 
 function WhitePage() {
-  return <GroupPlaceholderPage title="White" />;
+  return <CommunityPageLayout {...communityPageBySlug.white} />;
 }
 
 export default WhitePage;

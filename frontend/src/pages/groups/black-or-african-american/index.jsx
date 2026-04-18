@@ -1,7 +1,10 @@
-import GroupPlaceholderPage from "../_placeholder/GroupPlaceholderPage";
+import CommunityPageLayout from "../../../components/CommunityPageLayout";
+import { communityPageBySlug } from "../../../data/communityPages";
 
 function BlackOrAfricanAmericanPage() {
-  return <GroupPlaceholderPage title="Black or African-American" />;
+  return (
+    <CommunityPageLayout {...communityPageBySlug["black-or-african-american"]} />
+  );
 }
 
 export default BlackOrAfricanAmericanPage;

@@ -1,8 +1,11 @@
-import GroupPlaceholderPage from "../_placeholder/GroupPlaceholderPage";
+import CommunityPageLayout from "../../../components/CommunityPageLayout";
+import { communityPageBySlug } from "../../../data/communityPages";
 
 function NativeHawaiianOrOtherPacificIslanderPage() {
   return (
-    <GroupPlaceholderPage title="Native Hawaiian or Other Pacific Islander" />
+    <CommunityPageLayout
+      {...communityPageBySlug["native-hawaiian-or-other-pacific-islander"]}
+    />
   );
 }
 
