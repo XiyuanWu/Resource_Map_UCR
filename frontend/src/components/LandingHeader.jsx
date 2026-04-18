@@ -1,6 +1,6 @@
-import ucrLogo from '../assets/UC_Riverside_logo.svg.png'
+import ucrLogo from "../assets/UC_Riverside_logo.svg.png";
 
-const navItems = ['Home', 'About', 'How It Works', 'Acknowledgements']
+const navItems = ["Home", "Explore", "Contact"];
 
 function LandingHeader() {
   return (
@@ -20,8 +20,8 @@ function LandingHeader() {
                   href="#"
                   className={`font-display text-[20px] font-bold tracking-tight text-[#0d2e6a] transition hover:text-[#f2b617] ${
                     index === 0
-                      ? 'border-b-4 border-[#f2b617] pb-1'
-                      : 'border-b-4 border-transparent pb-1'
+                      ? "border-b-4 border-[#f2b617] pb-1"
+                      : "border-b-4 border-transparent pb-1"
                   }`}
                 >
                   {item}
@@ -32,7 +32,7 @@ function LandingHeader() {
         </nav>
       </div>
     </header>
-  )
+  );
 }
 
-export default LandingHeader
+export default LandingHeader;
