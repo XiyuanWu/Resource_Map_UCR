@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 function CommunityCard({ image, title, description, href = "#" }) {
   return (
     <article className="overflow-hidden rounded-2xl border border-[#b8c6df] bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-      <a
-        href={href}
+      <Link
+        to={href}
         className="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#12326b] focus-visible:ring-offset-2"
       >
         <div className="h-36 w-full overflow-hidden bg-[#dbe6f8]">
@@ -20,7 +22,7 @@ function CommunityCard({ image, title, description, href = "#" }) {
             {description}
           </p>
         </div>
-      </a>
+      </Link>
     </article>
   );
 }

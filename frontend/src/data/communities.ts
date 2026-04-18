@@ -6,51 +6,39 @@ export type Community = {
 
 export const communities: Community[] = [
   {
-    title: "Latino Community",
+    title: "Hispanic or Latino",
     description:
-      "Find resources, services, and programs that support Latino and Chicano students.",
-    href: "#latino-community",
+      "Connect with culturally responsive advising, bilingual support, and campus programs that uplift students with Spanish-speaking or Latin American heritage.",
+    href: "/groups/hispanic-or-latino",
   },
   {
-    title: "Black Community",
+    title: "American Indian or Alaskan Native",
     description:
-      "Explore spaces, organizations, and support systems for Black students and faculty.",
-    href: "#black-community",
+      "Explore resources centered on Indigenous identity, tribal community ties, and student success pathways for Native peoples of North and South America.",
+    href: "/groups/american-indian-or-alaskan-native",
   },
   {
-    title: "Muslim Community",
+    title: "Asian",
     description:
-      "Access faith-based resources, prayer spaces, and culturally responsive services.",
-    href: "#muslim-community",
+      "Discover support networks, student organizations, and academic opportunities that reflect the diversity of East, South, and Southeast Asian communities.",
+    href: "/groups/asian",
   },
   {
-    title: "Asian & Pacific Islander Community",
+    title: "Black or African-American",
     description:
-      "Discover programs, groups, and campus services for API communities.",
-    href: "#asian-pacific-islander-community",
+      "Find mentoring, leadership programs, and community spaces that celebrate Black identity and support belonging across campus life.",
+    href: "/groups/black-or-african-american",
   },
   {
-    title: "LGBTQ+ Community",
+    title: "Native Hawaiian or Other Pacific Islander",
     description:
-      "Connect with inclusive services, advocacy groups, and affirming campus spaces.",
-    href: "#lgbtq-community",
+      "Access community-driven support, cultural programming, and resources that honor Pacific Islander heritage, family, and collective wellbeing.",
+    href: "/groups/native-hawaiian-or-other-pacific-islander",
   },
   {
-    title: "First-Generation Community",
+    title: "White",
     description:
-      "Get guidance, mentorship, and resources tailored for first-generation students.",
-    href: "#first-generation-community",
-  },
-  {
-    title: "Neurodiversity Community",
-    description:
-      "Find academic support, wellness resources, and inclusive learning spaces.",
-    href: "#neurodiversity-community",
-  },
-  {
-    title: "Veterans & Military-Connected",
-    description:
-      "Explore benefits, advising, and peer support for veterans and military families.",
-    href: "#veterans-military-connected",
+      "Navigate opportunities for involvement, academic growth, and cross-cultural engagement while building inclusive community with peers from all backgrounds.",
+    href: "/groups/white",
   },
 ];

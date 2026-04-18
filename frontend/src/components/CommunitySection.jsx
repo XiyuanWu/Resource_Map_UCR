@@ -7,10 +7,10 @@ function CommunitySection() {
     <section className="mx-auto w-full max-w-6xl px-6 py-14 md:px-10">
       <div className="mb-8 text-center">
         <h2 className="font-display text-4xl font-bold tracking-tight text-[#0f2f69]">
-          Explore By Community
+          Explore By Identity Group
         </h2>
         <p className="mt-2 font-sans text-lg text-[#314a74]">
-          Select a community to view its belonging map and related resources.
+          Select a group to view its belonging map and related campus resources.
         </p>
       </div>
 
