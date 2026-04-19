@@ -1,31 +1,36 @@
 import placeholderImage from "../assets/landing/ucr background.jpg";
 import latinoSomosHeroImage from "../assets/landing/Background_Latino_Page.jpg";
 
-export type HeroVariant = "split" | "somos";
-
 export type CommunityPageData = {
   slug: string;
   title: string;
-  subtitle: string;
   description: string;
   heroImage: string;
-  /** Default `split` (cream + photo). `somos` = full-bleed SOMOS UCR hero (Latino). */
-  heroVariant?: HeroVariant;
+  /** Main brand line (default SOMOS UCR in hero). */
+  heroHeading?: string;
+  /** Gold uppercase line, e.g. "Latino Community Belonging Map". */
+  heroBelongingLine: string;
+  /** Gold tagline under the belonging line. */
+  heroTagline: string;
+  /** White intro paragraph in the hero. */
+  heroBody: string;
   mapPlaceholder: string;
   resourcePlaceholder: string;
-  contactPlaceholder: string;
 };
 
+const sharedHeroTagline =
+  "Celebrating Culture. Building Community. Supporting Success.";
+
 const defaultPlaceholders = {
-  subtitle: "COMMUNITY PAGE",
-  heroImage: placeholderImage,
   mapPlaceholder:
-    "Explore campus and nearby spots that support this community. Use category filters and search—map pins are placeholders until real coordinates are wired in.",
+    "Explore campus and nearby spots that support this community. Use category filters—map pins are placeholders until real coordinates are wired in.",
   resourcePlaceholder:
     "Each card matches the map filters. Add offices, cultural centers, dining, clubs, and services in your data file.",
-  contactPlaceholder:
-    "Contact placeholder: add coordinator email, social links, and office hours.",
 };
+
+function heroBodyForCommunity(label: string) {
+  return `This map highlights spaces, programs, businesses, and organizations that support and celebrate ${label} students, faculty, staff, and the greater Riverside community.`;
+}
 
 export const communityPageBySlug: Record<string, CommunityPageData> = {
   "hispanic-or-latino": {
@@ -34,42 +39,67 @@ export const communityPageBySlug: Record<string, CommunityPageData> = {
     description:
       "Resources, spaces, and organizations that support students with Spanish-speaking or Latin American heritage.",
     ...defaultPlaceholders,
-    heroVariant: "somos",
     heroImage: latinoSomosHeroImage,
+    heroBelongingLine: "Latino Community Belonging Map",
+    heroTagline: sharedHeroTagline,
+    heroBody:
+      "This map highlights spaces, programs, businesses, and organizations that support and celebrate Latinx students, faculty, staff, and the greater Riverside community.",
   },
-  "american-indian-or-alaskan-native": {
-    slug: "american-indian-or-alaskan-native",
-    title: "American Indian or Alaskan Native",
+  "ummah-muslim": {
+    slug: "ummah-muslim",
+    title: "Ummah-Muslim",
     description:
-      "Placeholder overview for this community. Add identity-centered context and what students can find on this page.",
+      "Prayer spaces, student groups, dining options, and support that reflect Muslim life and community on campus and in Riverside.",
     ...defaultPlaceholders,
+    heroImage: placeholderImage,
+    heroBelongingLine: "Ummah & Muslim Community Belonging Map",
+    heroTagline: sharedHeroTagline,
+    heroBody: heroBodyForCommunity("Muslim students, staff, and the ummah"),
   },
   asian: {
     slug: "asian",
     title: "Asian",
     description:
-      "Placeholder overview for this community. Add identity-centered context and what students can find on this page.",
+      "Resources that reflect the diversity of Asian and Asian American students, staff, and community partners.",
     ...defaultPlaceholders,
+    heroImage: placeholderImage,
+    heroBelongingLine: "Asian Community Belonging Map",
+    heroTagline: sharedHeroTagline,
+    heroBody: heroBodyForCommunity("Asian and Asian American"),
   },
   "black-or-african-american": {
     slug: "black-or-african-american",
     title: "Black or African-American",
     description:
-      "Placeholder overview for this community. Add identity-centered context and what students can find on this page.",
+      "Spaces and programs that affirm Black students, faculty, staff, and the broader Black community at UCR.",
     ...defaultPlaceholders,
+    heroImage: placeholderImage,
+    heroBelongingLine: "Black or African-American Community Belonging Map",
+    heroTagline: sharedHeroTagline,
+    heroBody: heroBodyForCommunity("Black and African American"),
   },
-  "native-hawaiian-or-other-pacific-islander": {
-    slug: "native-hawaiian-or-other-pacific-islander",
-    title: "Native Hawaiian or Other Pacific Islander",
+  "american-indian": {
+    slug: "american-indian",
+    title: "American Indian",
     description:
-      "Placeholder overview for this community. Add identity-centered context and what students can find on this page.",
+      "Resources and spaces that honor Indigenous students, tribal nations, and Native communities connected to UCR.",
     ...defaultPlaceholders,
+    heroImage: placeholderImage,
+    heroBelongingLine: "American Indian Community Belonging Map",
+    heroTagline: sharedHeroTagline,
+    heroBody: heroBodyForCommunity(
+      "American Indian, Alaska Native, and Indigenous",
+    ),
   },
   white: {
     slug: "white",
     title: "White",
     description:
-      "Placeholder overview for this community. Add identity-centered context and what students can find on this page.",
+      "Resources for students and staff interested in allyship, equity learning, and inclusive community engagement.",
     ...defaultPlaceholders,
+    heroImage: placeholderImage,
+    heroBelongingLine: "White Community Belonging Map",
+    heroTagline: sharedHeroTagline,
+    heroBody: heroBodyForCommunity("White-identifying and allied"),
   },
 };

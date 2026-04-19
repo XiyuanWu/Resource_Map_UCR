@@ -12,10 +12,10 @@ export const communities: Community[] = [
     href: "/groups/hispanic-or-latino",
   },
   {
-    title: "American Indian or Alaskan Native",
+    title: "Ummah-Muslim",
     description:
-      "Explore resources centered on Indigenous identity, tribal community ties, and student success pathways for Native peoples of North and South America.",
-    href: "/groups/american-indian-or-alaskan-native",
+      "Find prayer spaces, student associations, halal dining nearby, and mentors who understand navigating campus life as part of the Muslim ummah.",
+    href: "/groups/ummah-muslim",
   },
   {
     title: "Asian",
@@ -30,10 +30,10 @@ export const communities: Community[] = [
     href: "/groups/black-or-african-american",
   },
   {
-    title: "Native Hawaiian or Other Pacific Islander",
+    title: "American Indian",
     description:
-      "Access community-driven support, cultural programming, and resources that honor Pacific Islander heritage, family, and collective wellbeing.",
-    href: "/groups/native-hawaiian-or-other-pacific-islander",
+      "Explore resources centered on Indigenous identity, tribal community ties, and student success pathways for Native peoples connected to UCR.",
+    href: "/groups/american-indian",
   },
   {
     title: "White",

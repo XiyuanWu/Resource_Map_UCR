@@ -188,10 +188,10 @@ function fakePlaces(seed: string): MapPlace[] {
 
 export const communityMapPlacesBySlug: Record<string, MapPlace[]> = {
   "hispanic-or-latino": hispanicLatinoPlaces,
-  "american-indian-or-alaskan-native": fakePlaces("american-indian"),
+  "ummah-muslim": fakePlaces("ummah-muslim"),
   asian: fakePlaces("asian"),
   "black-or-african-american": fakePlaces("black-or-african"),
-  "native-hawaiian-or-other-pacific-islander": fakePlaces("nhopi"),
+  "american-indian": fakePlaces("american-indian"),
   white: fakePlaces("white"),
 };
 

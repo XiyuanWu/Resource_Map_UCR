@@ -1,7 +1,13 @@
 /**
- * SOMOS UCR hero (Latino community page) — ported from Latino_Page branch.
+ * Shared “SOMOS UCR” belonging-map hero for all race/ethnicity community subpages.
  */
-function SomosHeroSection({ heroImage }) {
+function SomosHeroSection({
+  heroImage,
+  heroHeading = "SOMOS UCR",
+  heroBelongingLine,
+  heroTagline,
+  heroBody,
+}) {
   return (
     <section
       id="overview"
@@ -10,29 +16,27 @@ function SomosHeroSection({ heroImage }) {
       <div className="relative flex min-h-[500px] items-center overflow-hidden rounded-4xl bg-gray-900 shadow-2xl">
         <img
           src={heroImage}
-          alt="Campus scene with cultural banners"
+          alt=""
           className="absolute inset-0 z-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 z-10 bg-linear-to-r from-black/80 via-black/40 to-transparent" />
 
         <div className="relative z-20 flex flex-col justify-center px-8 py-12 md:px-16 md:py-20">
           <h1 className="font-display text-6xl font-bold tracking-tight text-white md:text-7xl">
-            SOMOS UCR
+            {heroHeading}
           </h1>
 
           <p className="mt-2 font-display text-lg font-extrabold tracking-[0.18em] text-[#ECC24D] uppercase md:text-xl">
-            Latino Community Belonging Map
+            {heroBelongingLine}
           </p>
 
           <div className="mt-6 space-y-4">
             <p className="font-display text-[15px] font-bold tracking-widest text-[#ECC24D]">
-              Celebrating Culture. Building Community. Supporting Success.
+              {heroTagline}
             </p>
 
             <p className="max-w-xl font-sans text-sm leading-relaxed text-gray-200 md:text-base">
-              This map highlights spaces, programs, businesses, and
-              organizations that support and celebrate Latinx students, faculty,
-              staff, and the greater Riverside community.
+              {heroBody}
             </p>
           </div>
 
