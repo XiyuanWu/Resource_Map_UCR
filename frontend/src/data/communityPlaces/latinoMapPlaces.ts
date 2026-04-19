@@ -1,4 +1,4 @@
-import type { MapPlace } from "../../../data/communityMapPlaces";
+import type { MapPlace } from "../communityMapPlaces";
 
 const RESOURCE_PLACEHOLDER =
   "Placeholder resource — add link, contact, or hours when ready.";

@@ -1,5 +1,5 @@
 import { asianMapPlaces } from "./communityPlaces/asianMapPlaces";
-import { hispanicOrLatinoMapPlaces } from "../pages/groups/hispanic-or-latino/latinoMapPlaces";
+import { hispanicOrLatinoMapPlaces } from "./communityPlaces/latinoMapPlaces";
 
 export type PlaceCategory =
   | "community_clubs"
