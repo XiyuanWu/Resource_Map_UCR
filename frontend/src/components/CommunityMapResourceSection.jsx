@@ -1,6 +1,7 @@
 import { useCallback, useMemo, useState } from "react";
 import { placeCategoryLabels } from "../data/communityMapPlaces";
 import GoogleMapsMapPanel from "./GoogleMapsMapPanel";
+import ResourcePlaceCard from "./ResourcePlaceCard";
 
 function CommunityMapResourceSection({
   communityTitle,
@@ -131,84 +132,7 @@ function CommunityMapResourceSection({
             <ul className="min-h-0 flex-1 list-none space-y-3 overflow-y-auto overscroll-contain p-3">
               {filtered.map((p) => (
                 <li key={p.id} id={`place-card-${p.id}`}>
-                  <article className="overflow-hidden rounded-xl border border-[#e2eaf5] bg-white transition hover:border-[#0f2f69]/25 hover:shadow-sm">
-                    {p.images && p.images.length > 0 && (
-                      <div className="grid grid-cols-2 gap-px bg-[#e2eaf5]">
-                        {p.images.slice(0, 2).map((src, idx) => (
-                          <div
-                            key={`${p.id}-img-${idx}`}
-                            className="relative aspect-5/3 bg-[#eef2f8]"
-                          >
-                            <img
-                              src={src}
-                              alt=""
-                              className="h-full w-full object-cover"
-                              loading="lazy"
-                            />
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                    <div className="p-3">
-                      <div className="flex items-start justify-between gap-2">
-                        <h4 className="font-display text-base font-bold leading-snug text-[#0f2f69]">
-                          {p.name}
-                        </h4>
-                        <span className="shrink-0 rounded-full bg-[#0f2f69]/10 px-2 py-0.5 text-center font-sans text-[10px] font-semibold leading-tight text-[#0f2f69] md:text-xs">
-                          {placeCategoryLabels[p.category]}
-                        </span>
-                      </div>
-                      {p.address && (
-                        <p className="mt-1 font-sans text-xs text-[#5a7399] md:text-sm">
-                          {p.address}
-                        </p>
-                      )}
-                      <p className="mt-2 font-sans text-xs leading-relaxed text-[#314a74] md:text-sm">
-                        {p.blurb}
-                      </p>
-                      {(p.contact || p.resource) && (
-                        <dl className="mt-2 space-y-1 border-t border-[#eef2f8] pt-2 font-sans text-[11px] text-[#314a74] md:text-xs">
-                          {p.contact && (
-                            <div className="flex gap-1.5">
-                              <dt className="shrink-0 font-semibold text-[#0f2f69]">
-                                Contact
-                              </dt>
-                              <dd className="min-w-0">{p.contact}</dd>
-                            </div>
-                          )}
-                          {p.resource && (
-                            <div className="flex flex-col gap-0.5">
-                              <dt className="font-semibold text-[#0f2f69]">
-                                Resource
-                              </dt>
-                              <dd className="min-w-0 wrap-break-word">
-                                {p.resource.startsWith("http") ? (
-                                  <a
-                                    href={p.resource}
-                                    className="text-[#0f2f69] underline decoration-[#0f2f69]/30 underline-offset-2 hover:decoration-[#0f2f69]"
-                                  >
-                                    {p.resource}
-                                  </a>
-                                ) : (
-                                  p.resource
-                                )}
-                              </dd>
-                            </div>
-                          )}
-                        </dl>
-                      )}
-                      {p.googleMapsUrl && (
-                        <a
-                          href={p.googleMapsUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="mt-3 inline-flex items-center justify-center rounded-full bg-[#0f2f69] px-4 py-2 font-display text-xs font-bold text-white transition hover:bg-[#0b2453] md:text-sm"
-                        >
-                          Open in Google Maps
-                        </a>
-                      )}
-                    </div>
-                  </article>
+                  <ResourcePlaceCard place={p} />
                 </li>
               ))}
             </ul>

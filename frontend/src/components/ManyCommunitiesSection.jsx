@@ -1,5 +1,3 @@
-import placeholderImage from "../assets/landing/ucr background.jpg";
-
 function ManyCommunitiesSection() {
   return (
     <section className="mx-auto w-full max-w-6xl px-6 pb-20 md:px-10">
@@ -19,7 +17,7 @@ function ManyCommunitiesSection() {
 
         <div className="relative min-h-56 overflow-hidden">
           <img
-            src={placeholderImage}
+            src="https://plus.unsplash.com/premium_photo-1762200818690-3d7a10a876f6?auto=format&fit=crop&w=800&h=600&q=80"
             alt=""
             className="absolute inset-0 h-full w-full object-cover object-right opacity-85"
           />

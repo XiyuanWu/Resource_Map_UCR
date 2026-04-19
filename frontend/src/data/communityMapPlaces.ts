@@ -1,3 +1,5 @@
+import { asianMapPlaces } from "./communityPlaces/asianMapPlaces";
+
 export type PlaceCategory =
   | "community_clubs"
   | "faith"
@@ -21,7 +23,7 @@ export type MapPlace = {
   contact?: string;
   resource?: string;
   /** Optional card header images (URLs or public paths). */
-  images?: string[];
+  images?: string[] | false | null;
   /** Optional “Open in Google Maps” target. */
   googleMapsUrl?: string;
 };
@@ -189,7 +191,7 @@ function fakePlaces(seed: string): MapPlace[] {
 export const communityMapPlacesBySlug: Record<string, MapPlace[]> = {
   "hispanic-or-latino": hispanicLatinoPlaces,
   "ummah-muslim": fakePlaces("ummah-muslim"),
-  asian: fakePlaces("asian"),
+  asian: asianMapPlaces,
   "black-or-african-american": fakePlaces("black-or-african"),
   "american-indian": fakePlaces("american-indian"),
   white: fakePlaces("white"),

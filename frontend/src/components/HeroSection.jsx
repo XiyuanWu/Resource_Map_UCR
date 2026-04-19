@@ -5,9 +5,9 @@ function HeroSection() {
     <section
       className="relative flex min-h-[min(72vh,34rem)] items-center overflow-visible bg-blue-900 py-12 pb-52 md:py-16 md:pb-52"
       style={{
-        backgroundImage: `url(${heroBackground})`,
+        backgroundImage: `linear-gradient(to right, rgba(15, 47, 105, 0.8), rgba(15, 47, 105, 0.4)), url('https://images.unsplash.com/photo-1681077375948-3df67cf1a95e?auto=format&fit=crop&w=1920&h=1080&q=80')`,
         backgroundSize: "cover",
-        backgroundPosition: "top center",
+        backgroundPosition: "center",
       }}
     >
       <div className="mx-auto w-full max-w-4/5">

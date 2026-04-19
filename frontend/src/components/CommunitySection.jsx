@@ -1,4 +1,3 @@
-import placeholderImage from "../assets/landing/ucr background.jpg";
 import CommunityCard from "./CommunityCard";
 import { communities } from "../data/communities";
 
@@ -18,7 +17,7 @@ function CommunitySection() {
         {communities.map((community) => (
           <CommunityCard
             key={community.title}
-            image={placeholderImage}
+            image={community.image}
             title={community.title}
             description={community.description}
             href={community.href}
