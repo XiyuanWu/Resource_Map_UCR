@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 /**
  * Shared “SOMOS UCR” belonging-map hero for all race/ethnicity community subpages.
  */
@@ -41,12 +43,12 @@ function SomosHeroSection({
           </div>
 
           <div className="mt-10 flex flex-wrap gap-4">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="inline-flex items-center justify-center rounded-full bg-[#0f2f69] px-7 py-3 font-display text-base font-bold text-white transition-all hover:scale-105 hover:bg-[#1a4185]"
             >
               Back to Home
-            </a>
+            </Link>
             <a
               href="#resource"
               className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-7 py-3 font-display text-base font-bold text-white backdrop-blur-md transition-all hover:scale-105 hover:bg-white/20"

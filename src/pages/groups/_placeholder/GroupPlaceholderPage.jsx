@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import LandingHeader from "../../../components/LandingHeader";
 
 function GroupPlaceholderPage({ title }) {
@@ -12,12 +13,12 @@ function GroupPlaceholderPage({ title }) {
           Placeholder page. Due to time constraints, this community page will be
           built later.
         </p>
-        <a
-          href="/"
+        <Link
+          to="/"
           className="mt-8 inline-flex items-center justify-center rounded-full bg-[#0f2f69] px-5 py-2.5 font-display text-base font-bold text-white transition hover:bg-[#0b2453]"
         >
           Back to Home
-        </a>
+        </Link>
       </section>
     </main>
   );
