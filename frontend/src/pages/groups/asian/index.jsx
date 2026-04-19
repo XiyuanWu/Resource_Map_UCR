@@ -1,7 +1,8 @@
-import GroupPlaceholderPage from "../_placeholder/GroupPlaceholderPage";
+import CommunityPageLayout from "../../../components/CommunityPageLayout";
+import { communityPageBySlug } from "../../../data/communityPages";
 
 function AsianPage() {
-  return <GroupPlaceholderPage title="Asian" />;
+  return <CommunityPageLayout {...communityPageBySlug.asian} />;
 }
 
 export default AsianPage;

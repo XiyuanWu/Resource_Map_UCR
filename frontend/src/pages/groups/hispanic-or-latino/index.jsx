@@ -1,69 +1,8 @@
-import LandingHeader from "../../../components/LandingHeader";
-import placeholderImage from "../../../assets/landing/ucr background.jpg";
+import CommunityPageLayout from "../../../components/CommunityPageLayout";
+import { communityPageBySlug } from "../../../data/communityPages";
 
 function HispanicOrLatinoPage() {
-  return (
-    <main className="min-h-screen w-full bg-white">
-      <LandingHeader />
-
-      <section className="mx-auto w-full max-w-6xl px-6 py-14 md:px-10">
-        <div className="overflow-hidden rounded-4xl bg-linear-to-r from-[#fffaf0] via-[#fffdf8] to-[#f5f8ff] md:grid md:grid-cols-[1.05fr_0.95fr]">
-          <div className="flex flex-col justify-center px-7 py-10 md:px-12 md:py-14">
-            <p className="font-display text-sm font-extrabold tracking-[0.18em] text-[#2a4b84]">
-              COMMUNITY PAGE
-            </p>
-            <h1 className="mt-2 font-display text-4xl font-bold tracking-tight text-[#0f2f69]">
-              Hispanic or Latino
-            </h1>
-            <p className="mt-4 max-w-xl font-sans text-lg leading-relaxed text-[#314a74]">
-              This page will curate resources, spaces, and organizations that
-              support students with Spanish-speaking or Latin American heritage.
-            </p>
-
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href="/"
-                className="inline-flex items-center justify-center rounded-full bg-[#0f2f69] px-5 py-2.5 font-display text-base font-bold text-white transition hover:bg-[#0b2453]"
-              >
-                Back to Home
-              </a>
-              <a
-                href="#resources"
-                className="inline-flex items-center justify-center rounded-full border border-[#b8c6df] bg-white px-5 py-2.5 font-display text-base font-bold text-[#0f2f69] transition hover:bg-[#f5f8ff]"
-              >
-                Jump to Resources
-              </a>
-            </div>
-          </div>
-
-          <div className="relative min-h-64 overflow-hidden">
-            <img
-              src={placeholderImage}
-              alt=""
-              className="absolute inset-0 h-full w-full object-cover object-right opacity-85"
-            />
-            <div className="absolute inset-0 bg-linear-to-r from-[#fffdf8] via-[#fffdf8]/35 to-transparent" />
-            <div className="absolute inset-0 bg-linear-to-t from-[#fffdf8]/65 via-transparent to-transparent" />
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="resources"
-        className="mx-auto w-full max-w-6xl px-6 pb-20 md:px-10"
-      >
-        <div className="rounded-3xl border border-[#d3def0] bg-white p-6 md:p-8">
-          <h2 className="font-display text-2xl font-bold text-[#0f2f69]">
-            Resources (WIP)
-          </h2>
-          <p className="mt-2 font-sans text-base leading-relaxed text-[#314a74]">
-            Add links to campus offices, cultural centers, student orgs,
-            financial aid resources, and community services here.
-          </p>
-        </div>
-      </section>
-    </main>
-  );
+  return <CommunityPageLayout {...communityPageBySlug["hispanic-or-latino"]} />;
 }
 
 export default HispanicOrLatinoPage;
