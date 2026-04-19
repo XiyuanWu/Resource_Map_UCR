@@ -15,6 +15,10 @@ export type MapPlace = {
   address?: string;
   contact?: string;
   resource?: string;
+  /** Optional card header images (URLs or public paths). */
+  images?: string[];
+  /** Optional “Open in Google Maps” target. */
+  googleMapsUrl?: string;
 };
 
 const hispanicLatinoPlaces: MapPlace[] = [
@@ -29,6 +33,12 @@ const hispanicLatinoPlaces: MapPlace[] = [
     address: "UCR campus (see map)",
     contact: "Hours on UCR Dining site (placeholder)",
     resource: "https://dining.ucr.edu/ (placeholder link)",
+    images: [
+      "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=240&fit=crop",
+      "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=240&fit=crop",
+    ],
+    googleMapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=The+Halal+Shack+UC+Riverside",
   },
   {
     id: "latino-dining-mercado",

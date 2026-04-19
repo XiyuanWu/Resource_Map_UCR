@@ -6,7 +6,6 @@ const communityPageNavItems = [
   { label: "Overview", href: "#overview" },
   { label: "Map", href: "#map" },
   { label: "Resource", href: "#resource" },
-  { label: "Contact", href: "#contact" },
 ];
 
 function CommunityPageLayout({
@@ -17,7 +16,6 @@ function CommunityPageLayout({
   heroImage,
   mapPlaceholder,
   resourcePlaceholder,
-  contactPlaceholder,
 }) {
   const mapPlaces = communityMapPlacesBySlug[slug] ?? [];
 
@@ -63,28 +61,12 @@ function CommunityPageLayout({
         </div>
       </section>
 
-      <div className="mx-auto w-full max-w-6xl px-6 pb-6 md:px-10">
-        <CommunityMapResourceSection
-          communityTitle={title}
-          places={mapPlaces}
-          mapIntro={mapPlaceholder}
-          resourceIntro={resourcePlaceholder}
-        />
-      </div>
-
-      <section
-        id="contact"
-        className="mx-auto w-full max-w-6xl px-6 pb-20 md:px-10"
-      >
-        <div className="rounded-3xl border border-[#d3def0] bg-white p-6 md:p-8">
-          <h2 className="font-display text-2xl font-bold text-[#0f2f69]">
-            Contact
-          </h2>
-          <p className="mt-2 font-sans text-base leading-relaxed text-[#314a74]">
-            {contactPlaceholder}
-          </p>
-        </div>
-      </section>
+      <CommunityMapResourceSection
+        communityTitle={title}
+        places={mapPlaces}
+        mapIntro={mapPlaceholder}
+        resourceIntro={resourcePlaceholder}
+      />
     </main>
   );
 }
